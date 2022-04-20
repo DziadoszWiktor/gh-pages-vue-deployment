@@ -36,7 +36,7 @@ dist file should be commented
     git add -A
     git commit -m "dist commit"
     # pushing changes on gh-pages branch 
-    git push -f https://github.com/DziadoszWiktor/vue-test.git master:gh-pages
+    git push -f https://github.com/DziadoszWiktor/gh-pages-vue-deployment.git master:gh-pages
     # returning to project directory
     cd ..
 
