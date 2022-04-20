@@ -19,7 +19,13 @@ dist file should be commented
 
     #/dist
 
-## **4. Create deploy.sh script**
+## **4. Commit project changes**
+
+    git add -A
+    git commit -am "commit mess"
+    git push
+
+## **5. Create deploy.sh script**
 
     // building for productiion and generating dist file with static content
     npm run build
@@ -35,7 +41,12 @@ dist file should be commented
     cd ..
 
 ## **5. Run deploy.sh script**
+Script must be runned on every project commit
 
     ./deploy.sh
+
+<br>
+
+## [Deployed vue site here](https://dziadoszwiktor.github.io/gh-pages-vue-deployment/)
 
 
