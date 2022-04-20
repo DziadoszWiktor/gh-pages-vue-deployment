@@ -27,17 +27,17 @@ dist file should be commented
 
 ## **5. Create deploy.sh script**
 
-    // building for productiion and generating dist file with static content
+    # building for productiion and generating dist file with static content
     npm run build
-    // change into dist directory
+    # change into dist directory
     cd dist
-    // commiting changes
+    # commiting changes
     git init
     git add -A
     git commit -m "dist commit"
-    // pushing changes on gh-pages branch 
+    # pushing changes on gh-pages branch 
     git push -f https://github.com/DziadoszWiktor/vue-test.git master:gh-pages
-    // returning to project directory
+    # returning to project directory
     cd ..
 
 ## **5. Run deploy.sh script**
@@ -47,6 +47,6 @@ Script must be runned on every project commit
 
 <br>
 
-## [Deployed vue site here](https://dziadoszwiktor.github.io/gh-pages-vue-deployment/)
+## [Deployed Vue site here..](https://dziadoszwiktor.github.io/gh-pages-vue-deployment/)
 
 
