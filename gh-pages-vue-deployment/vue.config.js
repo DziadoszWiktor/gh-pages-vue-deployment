@@ -5,11 +5,14 @@ const { defineConfig } = require('@vue/cli-service')
             ? '/gh-pages-vue-deployment/'
             : '/',
         pwa: {
-            name: 'My App',
-            themeColor: 'red',
+            name: 'gh-pages Vue PWA App deployment ',
+            short_name: 'Vue PWA',
+            themeColor: 'black',
             msTileColor: '#000000',
             appleMobileWebAppCapable: 'yes',
             appleMobileWebAppStatusBarStyle: 'black',
+            color: 'white',
+            background_color: 'black'
             /*
             // configure the workbox plugin
             workboxPluginMode: 'InjectManifest',
