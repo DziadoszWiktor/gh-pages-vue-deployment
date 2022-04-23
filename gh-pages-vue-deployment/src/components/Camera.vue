@@ -13,8 +13,8 @@
       />
     </label><br>
 
-    <!-- displays the picture uploaded from the native camera -->
-    <img id="pictureFromCamera" style="height:500px;width:500px;"/>
+    <!-- displays the picture uploaded from the native camera width:800px;heigh:800px; -->
+    <img id="pictureFromCamera" style="width:800px;heigh:800px;object-fit: scale-down;"/>
   </div>
 </template>
 
@@ -27,10 +27,7 @@ export default {
       }
   },
   mounted() {
-    window.addEventListener('load', () => {
-      this.openCamera()
-    })
-    //window.onload = this.openCamera()
+    this.openCamera();
   },
   methods: {
     openCamera () {
@@ -40,6 +37,7 @@ export default {
           document
             .getElementById("pictureFromCamera")
             .setAttribute("src", window.URL.createObjectURL(this.files[0]));
+          window.console.log("this is: "+toString(window.URL.createObjectURL(this.files[0])));
         });
     }
   },
