@@ -2,10 +2,10 @@
   <div class="camera">
     <h1>{{ text }}</h1>
     <label for="cameraFileInput">
-      <span class="btn">Open camera</span>
+      <span class="btn btn-primary">Open camera</span>
 
-      <!-- The hidden file `input` for opening the native camera -->
-      <input
+      <!-- The hidden file `input` for opening the native camera  type="file"  -->
+      <input style="display:none;"
         id="cameraFileInput"
         type="file"
         accept="image/*"
@@ -27,7 +27,10 @@ export default {
       }
   },
   mounted() {
-    this.openCamera()
+    window.addEventListener('load', () => {
+      this.openCamera()
+    })
+    //window.onload = this.openCamera()
   },
   methods: {
     openCamera () {
