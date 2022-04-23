@@ -5,16 +5,16 @@
       <span class="btn btn-primary">Open camera</span>
 
       <!-- The hidden file `input` for opening the native camera  type="file"  -->
-      <input style="display:none;"
+      <input
         id="cameraFileInput"
         type="file"
         accept="image/*"
         capture="environment"
       />
-    </label>
+    </label><br>
 
     <!-- displays the picture uploaded from the native camera -->
-    <img id="pictureFromCamera" />
+    <img id="pictureFromCamera" style="height:500px;width:500px;"/>
   </div>
 </template>
 
