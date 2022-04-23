@@ -44,9 +44,17 @@ dist file should be commented
 Script must be runned on every project commit
 
     ./deploy.sh
-
 <br>
 
-## [Deployed Vue site here..](https://dziadoszwiktor.github.io/gh-pages-vue-deployment/)
+## **Useful links**
+* ### [Native camera in mobile browser](https://github.com/pixochi/native-camera-in-mobile-browsers/)
+* ### [Native camera in mobile browser (gh-pages)](https://pixochi.github.io/native-camera-in-mobile-browsers/)
+* ### [Camera example 1](https://codepen.io/chrisbeast/pen/ebYwpX)
+* ### [Javascript-Camera](https://github.com/doug2k1/javascript-camera)
+* ### [Camera example 2](https://codepen.io/ditarahma08/pen/GRRxZLW)
+<br>
+
+## **Check the site**
+## [**Deployed Vue site here..**](https://dziadoszwiktor.github.io/gh-pages-vue-deployment/)
 
 
