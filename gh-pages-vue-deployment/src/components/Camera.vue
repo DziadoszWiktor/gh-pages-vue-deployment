@@ -6,6 +6,7 @@
 
       <!-- The hidden file `input` for opening the native camera  type="file"  -->
       <input
+        style="display:none"
         id="cameraFileInput"
         type="file"
         accept="image/*"
@@ -19,6 +20,10 @@
 </template>
 
 <script>
+import { uploadString } from '@firebase/storage';
+import { refImg } from '../firebase';
+//import { base64StringToBlob } from 'blob-util';
+
 export default {
   name: 'CameraComponent',
   data() {
@@ -31,15 +36,22 @@ export default {
   },
   methods: {
     openCamera () {
-      document
+        document
         .getElementById("cameraFileInput")
         .addEventListener("change", function () {
-          document
-            .getElementById("pictureFromCamera")
-            .setAttribute("src", window.URL.createObjectURL(this.files[0]));
-          window.console.log("this is: "+toString(window.URL.createObjectURL(this.files[0])));
+          var FR= new FileReader();
+          FR.addEventListener("load", function(e) {
+            document.getElementById("pictureFromCamera").src = e.target.result;
+            //window.console.log("this is: "+e.target.result);
+            const base64img = e.target.result;
+            //window.console.log("this is a base64 var: "+ base64img);
+            uploadString(refImg,base64img,'data_url').then((snapshot) =>{
+              console.log("The photo has been sent");
+            })
+          }); 
+          FR.readAsDataURL( this.files[0] );
         });
-    }
+    },
   },
 }
 </script>

@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CameraView from '../views/CameraView.vue'
+import FirebaseView from '../views/FirebaseView.vue'
+
 
 /*
 
@@ -30,6 +32,11 @@ const routes = [
     path: '/camera',
     name: 'camera',
     component: CameraView
+  },
+  {
+    path: '/firebase',
+    name: 'firebase',
+    component: FirebaseView
   }
 ]
 
