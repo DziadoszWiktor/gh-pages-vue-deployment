@@ -43,10 +43,17 @@ const db = firebase.firestore(app);
 
 const storage = getStorage();
 
-const refImg = ref(storage, 'cars/car.jpg');
+/*
+var uuid = require("uuid");
+var id = uuid.v4();
+//console.log(id);
 
+const refImg = ref(storage, 'cars/'+id+'.jpg');
+*/
 
 export { db };
-export { refImg };
+export { storage };
+export { ref };
+//export { refImg };
 //export { storage };
 //export { ref };

@@ -21,8 +21,10 @@
 
 <script>
 import { uploadString } from '@firebase/storage';
-import { refImg } from '../firebase';
+//import { refImg } from '../firebase';
 //import { base64StringToBlob } from 'blob-util';
+import { storage } from '../firebase';
+import { ref } from '../firebase';
 
 export default {
   name: 'CameraComponent',
@@ -45,8 +47,12 @@ export default {
             //window.console.log("this is: "+e.target.result);
             const base64img = e.target.result;
             //window.console.log("this is a base64 var: "+ base64img);
+            var uuid = require("uuid");
+            var id = uuid.v4();
+            //console.log(id);
+            const refImg = ref(storage, 'cars/'+id+'.jpg');
             uploadString(refImg,base64img,'data_url').then((snapshot) =>{
-              console.log("The photo has been sent");
+              console.log("The photo has been sent in path cars/"+id+".jpg");``
             })
           }); 
           FR.readAsDataURL( this.files[0] );
