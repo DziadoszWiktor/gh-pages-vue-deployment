@@ -34,7 +34,7 @@ export default {
   name: 'CameraComponent',
   data() {
       return {
-          text: 'this is a camera O__O',
+          text: 'this is a camera',
       }
   },
   mounted() {
