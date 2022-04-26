@@ -26,7 +26,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 //import ref from "firebase/storage";
 
-import { getStorage,ref } from "firebase/storage"; 
+import { getDownloadURL,getStorage,ref } from "firebase/storage"; 
 
 const firebaseConfig = {
   apiKey: "AIzaSyDpRlGDGuk1JUXi0VhvSpVcJwcCm1Q2ep8",
@@ -54,6 +54,7 @@ const refImg = ref(storage, 'cars/'+id+'.jpg');
 export { db };
 export { storage };
 export { ref };
+export { getDownloadURL };
 //export { refImg };
 //export { storage };
 //export { ref };

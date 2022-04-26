@@ -21,5 +21,10 @@ const { defineConfig } = require('@vue/cli-service')
             swSrc: 'dev/sw.js',
             // ...other Workbox options...
             }*/
+        },
+        chainWebpack: config => {
+            config.performance
+              .maxEntrypointSize(5000000)
+              .maxAssetSize(5000000)
         }
     })

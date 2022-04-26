@@ -16,6 +16,9 @@
 
     <!-- displays the picture uploaded from the native camera width:800px;heigh:800px; -->
     <img id="pictureFromCamera" style="width:800px;heigh:800px;object-fit: scale-down;"/>
+    <br>
+    <h1>-----------------------</h1>
+    <img id="pictureFromStorage" style="width:800px;heigh:800px;object-fit: scale-down;"/>
   </div>
 </template>
 
@@ -25,6 +28,7 @@ import { uploadString } from '@firebase/storage';
 //import { base64StringToBlob } from 'blob-util';
 import { storage } from '../firebase';
 import { ref } from '../firebase';
+//import { getDownloadURL } from '../firebase';
 
 export default {
   name: 'CameraComponent',
